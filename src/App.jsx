@@ -101,7 +101,7 @@ export default function App() {
                   {['Customer','Job','Scheduled','Dispatch',''].map((h,i)=>(
                     <th key={i} className="px-6 py-4 text-left text-sm text-gray-700">{h}</th>
                   ))}
-                </tr</thead>
+                </tr></thead>
                 <tbody className="divide-y divide-gray-100">
                   {filtered.map(o=>(
                     <tr key={o.id}>
