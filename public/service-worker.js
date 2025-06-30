@@ -1,15 +1,8 @@
-self.addEventListener('install', function(event) {
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('impulseart-orders-v1').then(function(cache) {
-      return cache.addAll(['/', '/index.html']);
-    })
+    caches.open('v1').then(cache => cache.addAll(['/', '/index.html', '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png']))
   );
 });
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
+self.addEventListener('fetch', event => {
+  event.respondWith(caches.match(event.request).then(r => r || fetch(event.request)));
 });
