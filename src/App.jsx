@@ -90,7 +90,9 @@ export default function App() {
                       <td className="px-6 py-4 text-sm text-gray-800">{o.jobDate}</td>
                       <td className="px-6 py-4 text-sm text-gray-800">{o.dispatchDate}</td>
                       <td className="px-6 py-4 text-right">
-                        <button onClick={()=>markDone(o.id)} className="text-green-600 hover:underline">Done</button>
+                        <button onClick={()=>markDone(o.id)} className="text-green-600 hover:underline">
+                          Done
+                        </button>
                       </td>
                     </tr>
                   ))}
@@ -104,10 +106,12 @@ export default function App() {
             <input type="text" placeholder="Customer" className="w-full p-2 border rounded" value={form.customer} onChange={e=>setForm({...form,customer:e.target.value})}/>
             <input type="date" className="p-2 border rounded" value={form.jobDate} onChange={e=>setForm({...form,jobDate:e.target.value})}/>
             <input type="date" className="p-2 border rounded" value={form.dispatchDate} onChange={e=>setForm({...form,dispatchDate:e.target.value})}/>
-            <textarea placeholder="Notes" className="w-full p-2 border rounded" value={form.notes} onChange={e=>setForm({...form,notes:e.target.value})})}/>
+            <textarea placeholder="Notes" className="w-full p-2 border rounded" value={form.notes} onChange={e=>setForm({...form,notes:e.target.value})}/>
             <div className="space-x-4">
               {['leftChest','rightChest','leftSleeve','rightSleeve'].map(p=>(
-                <label key={p}><input type="checkbox" checked={form.positions[p]} onChange={e=>setForm({...form,positions:{...form.positions,[p]:e.target.checked}})}/> {p}</label>
+                <label key={p}>
+                  <input type="checkbox" checked={form.positions[p]} onChange={e=>setForm({...form,positions:{...form.positions,[p]:e.target.checked}})}/> {p}
+                </label>
               ))}
             </div>
             <button onClick={addOrder} className="bg-green-500 text-white px-4 py-2 rounded">Add Order</button>
@@ -117,7 +121,9 @@ export default function App() {
           <div className="space-y-4">
             <input type="number" placeholder="Quantity" className="w-full p-2 border rounded" value={calc.quantity} onChange={e=>setCalc({...calc,quantity:+e.target.value})}/>
             <input type="number" placeholder="Unit Price" className="w-full p-2 border rounded" value={calc.unitPrice} onChange={e=>setCalc({...calc,unitPrice:+e.target.value})}/>
-            <label><input type="checkbox" checked={calc.newLogo} onChange={e=>setCalc({...calc,newLogo:e.target.checked})}/> New Logo (£15)</label>
+            <label>
+              <input type="checkbox" checked={calc.newLogo} onChange={e=>setCalc({...calc,newLogo:e.target.checked})}/> New Logo (£15)
+            </label>
             <button onClick={calcTotal} className="bg-green-500 text-white px-4 py-2 rounded">Calculate</button>
             <div><strong>Total: £{calc.total.toFixed(2)}</strong></div>
           </div>
