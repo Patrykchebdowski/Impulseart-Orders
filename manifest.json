@@ -1,6 +1,6 @@
 
 {
-  "short_name": "ImpulseOrders",
+  "short_name": "ImpulseArt",
   "name": "ImpulseArt Orders",
   "icons": [
     {
@@ -15,8 +15,7 @@
     }
   ],
   "start_url": ".",
-  "background_color": "#ffffff",
   "display": "standalone",
-  "scope": ".",
-  "theme_color": "#36aa46"
+  "theme_color": "#36aa46",
+  "background_color": "#ffffff"
 }
