@@ -1,21 +1,21 @@
-
 {
-  "short_name": "ImpulseArt",
   "name": "ImpulseArt Orders",
+  "short_name": "Orders",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Manage embroidery and printing orders.",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "icons/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icon-512.png",
+      "src": "icons/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#36aa46",
-  "background_color": "#ffffff"
+  "theme_color": "#36aa46"
 }
